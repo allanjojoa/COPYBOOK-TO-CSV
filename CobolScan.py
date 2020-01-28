@@ -4,6 +4,7 @@ with open('cobol.copy','r') as file:
 file_code = [x[6:-11] for x in file_data]
 new_code = []
 comma = ''
+new_line = '\n'
 
 for line in file_code:
     new_code.append(line)
@@ -26,5 +27,7 @@ for line in file_code:
         new_code.append(comma.join(str_spaces))
         new_code.append(' ')
 
-for line in new_code:
-    print(line)
+code_str = new_line.join(new_code)
+
+with open('cobol-csv.copy','w') as file:
+    file.writelines(code_str)
