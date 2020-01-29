@@ -1,0 +1,38 @@
+* TRAIN6 EXAMPLE COBO
+  01 MASTER_REC.                                                 
+     05  ACCOUNT_NO                  PIC X(10) VALUE
+                                     'ACCOUNT_NO'.
+     05  REC_TYPE                    PIC X(8) VALUE
+                                     'REC_TYPE'.
+     05  AMOUNT                      PIC X(6) VALUE
+                                     'AMOUNT'.
+     05  BIN-NO                      PIC X(6) VALUE
+                                     'BIN-NO'.
+     05  BIN-NO-X REDEFINES BIN-NO   PIC X(8) VALUE
+                                     'BIN-NO-X'.
+     05  DECIMAL-NO                  PIC X(10) VALUE
+                                     'DECIMAL-NO'.
+     05  MASTER-DATE.                                            
+         10  DATE-YY            PIC X(7) VALUE
+                                'DATE-YY'.
+         10  DATE-MM            PIC X(7) VALUE
+                                'DATE-MM'.
+         10  DATE-DD            PIC X(7) VALUE
+                                'DATE-DD'.
+     05  MASTER-DOB REDEFINES MASTER-DATE.                       
+         10  YYMMDD             PIC X(6) VALUE
+                                'YYMMDD'.
+     05  ACT_TYPE                    PIC X(8) VALUE
+                                     'ACT_TYPE'.
+     05  OTHER-DATE.                                             
+         10  ODATE-YY           PIC X(8) VALUE
+                                'ODATE-YY'.
+         10  ODATE-MM           PIC X(8) VALUE
+                                'ODATE-MM'.
+         10  ODATE-DD           PIC X(8) VALUE
+                                'ODATE-DD'.
+     05  OTHER-DOB REDEFINES OTHER-DATE.                         
+         10  OYYMMDDTT          PIC X(9) VALUE
+                                'OYYMMDDTT'.
+     05  OTHER_TYPE                  PIC X(10) VALUE
+                                     'OTHER_TYPE'.
